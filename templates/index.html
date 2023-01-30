@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Weather{% endblock  %}
+
+{% block logo %}
+<link rel="icon" href="http://openweathermap.org/img/w/{{data.icon}}.png">
+{% endblock  %}
+
+{% block content %}
+
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="form-box">
+        <div class="form-group">
+            <label class="form-label fw-bold" for="userInput">Enter City or Country</label>
+            <input class="form-control" type="text" name='userInput' placeholder="Enter City or Country">
+        </div>
+        <div class="btn-cont d-flex mt-2">
+            <button type='submit' class="btn btn-success w-50 ms-auto me-auto">Search</button
+        </div>
+    </div>
+</form>
+
+{% if data.city is not None%}
+
+<div class="card mt-2">
+    <img class="img" src="http://openweathermap.org/img/w/{{data.icon}}.png" alt="Icon">
+    <div class="card-body">
+        <p class="card-title">Result: <span class="fw-bold">{{data.city}}</span></p>
+        <p class="card-text">Temperature: <span class="fw-bold">{{data.temperature}}</span></p>
+        <p class="card-text">Pressure: <span class="fw-bold">{{data.pressure}}</span></p>
+        <p class="card-text">Humidity: <span class="fw-bold">{{data.humidity}}</span></p>
+        <p class="card-text">Sea Level: <span class="fw-bold">{{data.sealevel}}</span></p>
+        <p class="card-text">Timezone: <span class="fw-bold">{{data.timezone}}</span></p>
+        <p class="card-text">Country: <span class="fw-bold">{{data.country}}</span></p>
+        <p class="card-text">Description: <span class="fw-bold">{{data.description}}</span></p>
+        <p class="card-text">Mode: <span class="fw-bold">{{data.mode}}</span></p>
+        <a href="/" class="btn btn-danger">Close</a>
+    </div>
+</div>
+{% endif %}
+
+
+{% endblock  %}

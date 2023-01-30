@@ -1,0 +1,19 @@
+.form-box
+{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    width: 350px;
+    height: min-content;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.438);
+    padding: 20px;
+}
+
+.img
+{
+    height: 70px;
+    width: 70px;
+    object-position: center;
+    object-fit: contain;
+}
