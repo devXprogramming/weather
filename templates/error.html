@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Error Page{% endblock  %}
+
+{% block content %}
+
+<div class="error-card">
+    <div class="card">
+        <img class="card-img-top img-show" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Alert-Stop-Warning-Error_icon.svg/2048px-Alert-Stop-Warning-Error_icon.svg.png" alt="Error Icon">
+        <div class="card-body">
+            <h4 class="card-title">Invalid Country or City</h4>
+            <p class="card-text text-danger">The city "<span class="fw-bold">{{show.city}}</span>" was not Found.</p>
+            <p class="card-text">Please click on the Button below to try Again</p>
+            <div class="btn-cont mt-2 d-flex">
+                <a href="/" class="btn btn-danger w-50 me-auto ms-auto">Back</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock  %}
