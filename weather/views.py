@@ -16,7 +16,7 @@ def home(request):
             url = urllib.request.urlopen(f'https://api.openweathermap.org/data/2.5/weather?q={userInput}&appid={apiKey}')
             
             res = json.load(url)
-            print(res)
+            # print(res)
 
             data = {
                 'city': userInput,
