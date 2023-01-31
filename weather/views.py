@@ -18,6 +18,7 @@ def home(request):
             res = json.load(url)
             # print(res)
 
+
             data = {
                 'city': userInput,
                 'temperature': res['main']['temp'],
