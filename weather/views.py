@@ -43,3 +43,12 @@ def home(request):
         }
 
     return render(request,'index.html', {'data':data})
+
+
+def login(request):
+    if request.method=='POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+    else:
+        return render(request, 'errorLogin')
+    return render(request, 'login.html')
