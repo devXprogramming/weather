@@ -1,10 +1,10 @@
-{% include 'base.html' %}
 
 <title>Weather Web App</title>
 
-{% block logo %}
-<link rel="icon" href="http://openweathermap.org/img/w/{{data.icon}}.png">
-{% endblock  %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="icon" href="{% static 'http://openweathermap.org/img/w/{{data.icon}}.png' %}">
 
 <body>
     <form action="" method="POST">
@@ -34,7 +34,7 @@
             <p class="card-text">Country: <span class="fw-bold">{{data.country}}</span></p>
             <p class="card-text">Description: <span class="fw-bold">{{data.description}}</span></p>
             <p class="card-text">Mode: <span class="fw-bold">{{data.mode}}</span></p>
-            <a href="/" class="btn btn-danger">Close</a>
+            <a href="/home/" class="btn btn-danger">Close</a>
         </div>
     </div>
     {% endif %}

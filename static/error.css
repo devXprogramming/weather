@@ -1,5 +1,7 @@
-body{
-    background-color: black;
+body
+{
+    background: lightblue;
+    color: white;
 }
 
 .error-card
