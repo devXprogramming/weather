@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import json
 import urllib
 
@@ -46,9 +46,11 @@ def home(request):
 
 
 def login(request):
-    if request.method=='POST':
+    if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
-    else:
-        return render(request, 'errorLogin')
+
+        if email == 'admin@gmail.com' and password == 'admin':
+            return redirect(request, '/home')
+
     return render(request, 'login.html')

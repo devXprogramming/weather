@@ -1,10 +1,24 @@
-{% extends 'base.html' %}
+{% include 'base.html' %}
 
+<title>Login</title>
 
-{% block content %}
-<div class="login-box">
-    <form>
-        
-    </form>
-</div>
-{% endblock  %}
+<body>
+    <div class="login-box">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <h3>Email: admin@gmail.com</h3>
+            <h3>Password: admin</h3>
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control" type="email" name="email" id="email">
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <input class="form-control" type="password" name="password" id="password">
+            </div>
+            <div class="btn-cont d-flex mt-2">
+                <button class="btn btn-success w-50 me-auto ms-auto">Login</button>
+            </div>
+        </form>
+    </div>
+</body>

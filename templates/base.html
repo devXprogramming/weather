@@ -8,13 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
         <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="{% static 'login.css' %}">
         <link rel="stylesheet" href="{% static 'error.css' %}">
         <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
         {% block logo %}{% endblock  %}
         <script src="{% static 'bootstrap.bundle.js' %}"></script>
     <body>
-        {% block content %}
-            
-        {% endblock  %}
     </body>
 </html>
