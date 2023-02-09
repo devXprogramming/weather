@@ -51,6 +51,6 @@ def login(request):
         password = request.POST.get('password')
 
         if email == 'admin@gmail.com' and password == 'admin':
-            return redirect(request, '/home')
+            return redirect('home/')
 
     return render(request, 'login.html')
