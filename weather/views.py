@@ -5,6 +5,7 @@ import urllib
 # Create your views here.
 
 
+
 def home(request):
     if request.method=="POST":
 
@@ -35,7 +36,7 @@ def home(request):
             show = {
                 'city': userInput,
             }
-            return render(request, 'error.html', {'show':show})
+            return redirect( '/invalid/', {'show':show})
     else:
         data = {
             'city':None,
@@ -43,6 +44,9 @@ def home(request):
         }
 
     return render(request,'index.html', {'data':data})
+
+def invalid(request):
+    return render(request,'error.html')
 
 
 def login(request):
