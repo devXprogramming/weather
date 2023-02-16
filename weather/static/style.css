@@ -18,7 +18,7 @@ body
     width: 350px;
     height: min-content;
     padding: 20px;
-    box-shadow: 5px 5px 20px rgba(190, 5, 5, 0.973);
+    box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.973);
 }
 
 .img
